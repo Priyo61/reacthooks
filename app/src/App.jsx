@@ -9,11 +9,12 @@ function App() {
 }
 
 const ToggleMessage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   return (
     <div>
-      <button>Toggle Message</button>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle Message</button>
+      {isVisible && <p>This message is conditionally rendered!</p>}
     </div>
   );
 };
